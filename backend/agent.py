@@ -114,8 +114,8 @@ class GroceryAgent:
 
         # For single-platform strategies, put everything in that platform's cart
         if optimal_strategy == "zepto":
-            final_zepto = [{"product_id": i["product_id"], "product_name": i["product_name"],
-                            "price": i["price"], "quantity": i["quantity"], "unit": i["unit"]}
+            final_zepto = [{"product_id": i["zepto"]["product_id"], "product_name": i["zepto"]["product_name"],
+                            "price": i["zepto"]["price"], "quantity": i["quantity"], "unit": i["zepto"]["unit"]}
                            for i in result_items if i["zepto"].get("found")]
             final_instamart = []
         elif optimal_strategy == "instamart":
